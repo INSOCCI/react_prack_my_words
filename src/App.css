@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+body{
+    background-color: #fcfaf0;
+}
+#nav_bar{
+    width: 100%;
+    max-width: 100%;
+    background-color: #016339;
+    position: fixed;
+    z-index: 99;
+}

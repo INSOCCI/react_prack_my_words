@@ -21,8 +21,9 @@
 
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 import MainPage from "./pages/MainPage";
 import WordChangePage from "./pages/WordChangePage";
@@ -32,7 +33,7 @@ import Navs from "./components/Navs";
 function App() {
   return (
     <div>
-      <Navs/>
+      <Navs />
       <Routes>
         <Route path="/" element={<MainPage/>}/>
         <Route path="/:id" element={<WordChangePage/>}/>
