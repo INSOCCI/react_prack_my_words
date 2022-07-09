@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 *{
     font-family: 'Noto Sans KR', sans-serif;
 
 }
 body{
-    background-color: #fcfaf0;
+    background-color: #F0ECE5;
 }
 #nav_bar{
     width: 100%;
     max-width: 100%;
-    background-color: #016339;
+    background-color: #F0ECE5;
     position: fixed;
+    top: 0;
     z-index: 99;
+    font-family: 'Ubuntu', sans-serif;
+    border-bottom: #E4E0D9 3px solid;
 }

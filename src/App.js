@@ -18,17 +18,20 @@
   기능 - (1) text 미입력 칸 있을 시 -> 경고창 띄우기
          (2) text 입력 시 -> 메인으로 이동하면 입력했던 내용이 반영된 카드 생성
 */
-
+//librurlly
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+//hook
 
+//css
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-
-import MainPage from "./pages/MainPage";
-import WordChangePage from "./pages/WordChangePage";
-import WordAddPage from "./pages/WordAddPage";
+//page
+import MainPage from "./MainPage";
+import WordChangePage from "./WordChangePage";
+import WordAddPage from "./WordAddPage";
 import Navs from "./components/Navs";
+
 
 function App() {
   return (

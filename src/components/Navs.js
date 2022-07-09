@@ -3,9 +3,9 @@ import {Navbar, Container} from 'react-bootstrap';
 
 let Navs = () => {
   return (
-    <Navbar id="nav_bar" collapseOnSelect expand="lg" variant="dark">
+    <Navbar id="nav_bar" collapseOnSelect expand="lg">
       <Container>
-        <Navbar.Brand href="/">My Words</Navbar.Brand>
+        <Navbar.Brand style={{fontFamily:"'Ubuntu', sans-serif", fontWeight:"300", fontSize:"2em"}} href="/">My Words</Navbar.Brand>
       </Container>
     </Navbar>
   )
