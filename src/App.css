@@ -7,6 +7,7 @@
 body{
     background-color: #F0ECE5;
 }
+/*Navs.js */
 #nav_bar{
     width: 100%;
     max-width: 100%;
@@ -16,4 +17,32 @@ body{
     z-index: 99;
     font-family: 'Ubuntu', sans-serif;
     border-bottom: #E4E0D9 3px solid;
+}
+/*WordForm.js*/
+#wordform_box{
+    width: 28rem;
+    overflow: hidden;
+    margin: 8rem auto;
+    line-height: 1rem;
+}
+#wordform_box .change_btn{
+    width: 40%;
+    background-color: #ffdb0e;
+    border: none;
+    color: #fff;
+    margin-left: 30%;
+    margin-top: 20px;
+}
+#wordform_box .change_btn{
+    width: 40%;
+    background-color: #fff;
+    border: none;
+    color: rgb(39, 39, 39);
+    margin-left: 30%;
+    margin-top: 20px;
+    font-weight: 500;
+}
+#wordform_box .text_input{
+    border: none;
+    background-color: #e4e0d9da;
 }

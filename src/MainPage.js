@@ -1,5 +1,4 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 
 import WordCard from "./components/WordCard";
@@ -7,11 +6,11 @@ import WordCard from "./components/WordCard";
 const MainPage = () => {
   return (
   <>
-    <CardBox>
+    <CardsBox>
       <WordCard />
       <WordCard />
       <WordCard />
-    </CardBox> 
+    </CardsBox> 
     <AddBtn>
       <img src="https://cdn-icons-png.flaticon.com/128/983/983952.png" style={{width:"3rem", height:"3rem"}}/>
     </AddBtn>  
@@ -19,7 +18,7 @@ const MainPage = () => {
   )
 }
 
-const CardBox = styled.div`
+const CardsBox = styled.div`
 width: 100rem;
 max-width: 100%;
 overflow: hidden;

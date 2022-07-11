@@ -1,8 +1,12 @@
 import React from 'react';
 
+import WordForm from './components/WordForm';
+
 const WordChangePage = () => {
   return (
-    <div>WordChangePage</div>
+    <>
+      <WordForm/>
+    </>  
   )
 }
 

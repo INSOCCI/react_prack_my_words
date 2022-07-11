@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const WordCard = () => {
   return (
     <>
-      <CardBody>
+      <CardBox>
         <CardNavBar>
           <h4 style={{float:"left"}}> 단어 
             <span style={{fontSize:"0.8rem",color:"#727272", marginLeft:"5px"}}>[발음]</span>
@@ -15,7 +15,12 @@ const WordCard = () => {
             <img src="https://cdn-icons-png.flaticon.com/128/1828/1828744.png" style={{width: "0.9em", height: "0.9em"}}/>
         </IconBox>
         </CardNavBar>
-      </CardBody>
+        <CardBody>
+          <p>의미의미의미의미의미</p>
+          <span style={{color: "blue"}}><p>예문</p>
+          <p>해석</p></span>
+        </CardBody>
+      </CardBox>
     </>
 
   )
@@ -24,23 +29,45 @@ const WordCard = () => {
 
 
 
-const CardBody = styled.div`
+const CardBox = styled.div`
   width: 28rem;
   max-width: 100%;
   height: 11rem;
   padding: 20px;
   margin: 10px;
-  box-shadow: 4px 3px 4px;
+  box-shadow: 2px 3px 0.8px #333;
+ // border: 2px #F4E035 solid;
   border-radius: 1rem;
   background-color: #fff;
 `;
+//const OnCardBox = styled.div`
+//   width: 28rem;
+//   max-width: 100%;
+//   height: 11rem;
+//   padding: 20px;
+//   margin: 10px;
+//   box-shadow: 2px 3px 0.8px #333;
+//  // border: 2px #F4E035 solid;
+//   border-radius: 1rem;
+//   background-color: #f5df19cf;
+// `;
+
 const CardNavBar = styled.div`
   width: 100%;
   height: 2rem;
   margin: auto;
 `;
+// const OnCardNavBar = styled.div``;
+
 const IconBox = styled.div`
   float: right;
+`;
+const CardBody = styled.div`
+  float: left;
+  width: 100%;
+  line-height: 0.8em;
+  margin-top: 0.8rem;
+  
 `;
 
 
