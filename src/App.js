@@ -1,10 +1,10 @@
 /* 
 1. 전체 단어 페이지(메인)
   -레이아웃/디쟌-
-    body : 전체 bg넣기
-    nav : 상단 fix, 컴포넌트화
-    +btn : 오른쪽 하단 fix, +아이콘 png?파일?, 마우스오버-> 90도 회전
-    card : 정렬은 bootstrap 이용, 아이콘 btn들 png로 가져오기?(색깔 바껴야함..)
+    body : 전체 bg넣기 !!
+    nav : 상단 fix, 컴포넌트화 !!
+    +btn : 오른쪽 하단 fix, +아이콘 png?파일?, !! 마우스오버-> 90도 회전 !!
+    card : 정렬은 bootstrap 이용, 아이콘 btn들 png로 가져오기?(색깔 바껴야함..) !
   -기능-
     card>btn : (1) 클릭-> card색깔 변함 (2) 단어 수정페이지로 이동 (3) 비밀번호 입력창? 삭제기능 찾아보기!
     +btn : 클릭 -> 단어 추가 페이지로 이동
@@ -21,6 +21,8 @@
 //librurlly
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+
+import {db} from "./firebase";
 //hook
 
 //css
@@ -34,7 +36,9 @@ import Navs from "./components/Navs";
 
 
 function App() {
+  console.log(db);
   return (
+
     <div>
       <Navs />
       <Routes>
@@ -42,7 +46,6 @@ function App() {
         <Route path="/:id" element={<WordChangePage/>}/>
         <Route path="/word_add" element={<WordAddPage/>}/>
       </Routes>
-      
     </div>
   );
 }

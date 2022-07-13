@@ -1,18 +1,24 @@
-import React from 'react'
-import styled from 'styled-components';
 
+import React from 'react'
+import {useNavigate} from "react-router-dom";
+import styled from 'styled-components';
 import WordCard from "./components/WordCard";
 
 const MainPage = () => {
+
+  const navigate = useNavigate()
+
+  const goToAddPage=()=>{
+    navigate('/word_add');
+  }
+
   return (
   <>
     <CardsBox>
       <WordCard />
-      <WordCard />
-      <WordCard />
     </CardsBox> 
-    <AddBtn>
-      <img src="https://cdn-icons-png.flaticon.com/128/983/983952.png" style={{width:"3rem", height:"3rem"}}/>
+    <AddBtn className='add_btn' onClick={goToAddPage}>
+      <img src="https://cdn-icons-png.flaticon.com/128/983/983952.png" style={{width:"3rem", height:"3rem"}}/> 
     </AddBtn>  
   </>  
   )
@@ -33,7 +39,6 @@ position: fixed;
 bottom: 2%;
 right: 2%;
 `;
-
 export default MainPage
 
 

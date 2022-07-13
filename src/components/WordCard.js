@@ -1,24 +1,37 @@
+import { hover } from '@testing-library/user-event/dist/hover';
+import { isCursorAtStart } from '@testing-library/user-event/dist/utils';
 import React from 'react';
+
+import { useNavigate } from "react-router-dom";
+
 import styled from 'styled-components';
 
+
 const WordCard = () => {
+
+  const navigate = useNavigate()
+
+  const goToChangePage=()=>{
+    navigate('/{change_word}')
+  }
+ 
   return (
     <>
       <CardBox>
         <CardNavBar>
-          <h4 style={{float:"left"}}> 단어 
-            <span style={{fontSize:"0.8rem",color:"#727272", marginLeft:"5px"}}>[발음]</span>
+          <h4 style={{float:"left"}}> {}
+            <span style={{fontSize:"0.8rem",color:"#727272", marginLeft:"5px"}}>[{}]</span>
           </h4>
           <IconBox>
             <img src="https://cdn-icons-png.flaticon.com/512/1828/1828700.png" style={{width: "1.2em", height: "1.2em"}}/>
-            <img src="https://cdn-icons-png.flaticon.com/128/7955/7955425.png" style={{width: "0.9em", height: "0.9em", margin: "0px 15px"}}/>
+            <img onClick={goToChangePage} src="https://cdn-icons-png.flaticon.com/128/7955/7955425.png" style={{width: "0.9em", height: "0.9em", margin: "0px 15px"}}/>
             <img src="https://cdn-icons-png.flaticon.com/128/1828/1828744.png" style={{width: "0.9em", height: "0.9em"}}/>
-        </IconBox>
+          </IconBox>
         </CardNavBar>
         <CardBody>
-          <p>의미의미의미의미의미</p>
-          <span style={{color: "blue"}}><p>예문</p>
-          <p>해석</p></span>
+          <p>{}</p>
+          <span style={{color: "blue"}}><p>{}</p>
+          <p>{}</p></span>
         </CardBody>
       </CardBox>
     </>
@@ -62,6 +75,7 @@ const CardNavBar = styled.div`
 const IconBox = styled.div`
   float: right;
 `;
+
 const CardBody = styled.div`
   float: left;
   width: 100%;
