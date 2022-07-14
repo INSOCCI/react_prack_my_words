@@ -22,7 +22,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import {db} from "./firebase";
 //hook
 
 //css
@@ -36,7 +35,8 @@ import Navs from "./components/Navs";
 
 
 function App() {
-  console.log(db);
+
+  
   return (
 
     <div>

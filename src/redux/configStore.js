@@ -1,14 +1,14 @@
-import { combineReducers } from 'redux';
+import { combineReducers, applyMiddleware, compose } from 'redux';
 import { legacy_createStore as createStore } from "redux";
+import thunk from 'redux-thunk';
 
 import cards from './modules/cards';
 
+const middlewares = [thunk];
+const rootReducer = combineReducers({cards});
+const enhancer = applyMiddleware(...middlewares);
 
-const rootReducer = combineReducers({
-    cards
-});
 
-
-let store = createStore(rootReducer);
+let store = createStore(rootReducer, enhancer);
 
 export default store;

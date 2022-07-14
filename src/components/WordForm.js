@@ -1,12 +1,12 @@
-import { getValue } from '@testing-library/user-event/dist/utils';
+
 import React from 'react';
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Form } from 'react-bootstrap';
 
 
 const WordForm = ({setName,setPronoun,setMean,setEx,setExMean}) => {
-  
-   
+    
+    
     const form_name = React.useRef(null)
     const form_pronoun = React.useRef(null)
     const form_mean = React.useRef(null)
@@ -14,7 +14,7 @@ const WordForm = ({setName,setPronoun,setMean,setEx,setExMean}) => {
     const form_exmean = React.useRef(null)
 
     // setName(form_name)
-
+    
 
   return (
         <>

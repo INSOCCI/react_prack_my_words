@@ -1,13 +1,19 @@
-import { hover } from '@testing-library/user-event/dist/hover';
-import { isCursorAtStart } from '@testing-library/user-event/dist/utils';
+// import { hover } from '@testing-library/user-event/dist/hover';
+// import { isCursorAtStart } from '@testing-library/user-event/dist/utils';
 import React from 'react';
 
+
 import { useNavigate } from "react-router-dom";
+import {useSelector} from "react-redux";
+import {db} from "../firebase";
 
 import styled from 'styled-components';
 
 
 const WordCard = () => {
+
+  const data = useSelector((state) => state.cards.cards);
+  
 
   const navigate = useNavigate()
 
@@ -17,10 +23,12 @@ const WordCard = () => {
  
   return (
     <>
-      <CardBox>
+      {data.map((x,idx) => {
+        return (
+        <CardBox>
         <CardNavBar>
-          <h4 style={{float:"left"}}> {}
-            <span style={{fontSize:"0.8rem",color:"#727272", marginLeft:"5px"}}>[{}]</span>
+          <h4 style={{float:"left"}}> {x.name}
+            <span style={{fontSize:"0.8rem",color:"#727272", marginLeft:"5px"}}>[{x.pronoun}]</span>
           </h4>
           <IconBox>
             <img src="https://cdn-icons-png.flaticon.com/512/1828/1828700.png" style={{width: "1.2em", height: "1.2em"}}/>
@@ -29,11 +37,14 @@ const WordCard = () => {
           </IconBox>
         </CardNavBar>
         <CardBody>
-          <p>{}</p>
-          <span style={{color: "blue"}}><p>{}</p>
-          <p>{}</p></span>
+          <p>{x.mean}</p>
+          <span style={{color: "#6E85B7"}}><p>{x.ex}</p>
+          <p>{x.exmean}</p></span>
         </CardBody>
       </CardBox>
+        )
+      })}
+      
     </>
 
   )

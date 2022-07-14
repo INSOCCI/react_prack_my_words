@@ -1,12 +1,24 @@
 
 import React from 'react'
 import {useNavigate} from "react-router-dom";
+import {useDispatch} from 'react-redux';
+import {loadcardFB } from './redux/modules/cards';
+
 import styled from 'styled-components';
+
+
 import WordCard from "./components/WordCard";
 
 const MainPage = () => {
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    console.log("제발 좀  떠줘")
+     dispatch(loadcardFB());
+  }, []);
+  
 
   const goToAddPage=()=>{
     navigate('/word_add');
@@ -15,6 +27,7 @@ const MainPage = () => {
   return (
   <>
     <CardsBox>
+
       <WordCard />
     </CardsBox> 
     <AddBtn className='add_btn' onClick={goToAddPage}>
